@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body class="error" style=" text-align: center;background-image:url('{%static 'images/error.jpg'%}'); background-size: 1500px 650px; background-repeat: no-repeat;">>
+<form action="{% url 'home' %} " method="GET">
+   <h1 style="color"red;>*************  ERROR  ***************</h1>>
+    <br></br>
+    <h2>Runs_Last_5_Overs COULD NOT BE GREATER THAN TOTAL Runs</h2>
+    <br></br>
+    <input type="submit" value=" > Back Home ">
+</form>
+</body>
+</html>

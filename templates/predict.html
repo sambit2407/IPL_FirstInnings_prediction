@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+
+<body class="ipl2" style=" text-align: center; background-image:url('{%static 'images/predpage.jpg'%}'); background-size: 1550px 725px; background-repeat: no-repeat;">
+<form action="{% url 'home' %} " method="GET">
+<h1>{{inp_bat_team}}</h1>
+
+    <h2 >FIRST INNINGS PREDICTED SCORE :  </h2>
+    <h1 style="color:rgb(34, 234, 0);">{{lower_val}} to  {{upper_val}}</h1>
+    <br></br>
+<input type="submit" value=" > Back Home ">
+</form>
+</body>
+</html>
