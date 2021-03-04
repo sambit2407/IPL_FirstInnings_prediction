@@ -1,1 +1,1 @@
-web: gunicorn djangomodel.wsgi
+web: gunicorn djangoModel.wsgi
