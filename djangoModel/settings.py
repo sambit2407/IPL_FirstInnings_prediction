@@ -115,10 +115,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-MIDDLEWARE_CLASSES = (
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
@@ -134,6 +130,6 @@ MEDIA_URL='/images/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
-MEDIA_ROOT = os.path.join(BASE_DIR, "static")
+
 
 django_heroku.settings(locals())
