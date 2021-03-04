@@ -1,8 +1,18 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from modelApi import models
 import pandas as pd
-from modelApi.models import data_dep
+
+
+data = pd.read_csv("ipl.csv")
+col_to_rem = ['mid', 'batsman', 'bowler', 'striker', 'non-striker']
+data.drop(columns=col_to_rem, axis=0, inplace=True)
+recent_team = ['Kolkata Knight Riders', 'Chennai Super Kings', 'Rajasthan Royals', 'Mumbai Indians', 'Kings XI Punjab',
+               'Royal Challengers Bangalore', 'Delhi Daredevils', 'Sunrisers Hyderabad']
+data = data[data['bat_team'].isin(recent_team) & data['bowl_team'].isin(recent_team)]
+data = data[data['overs'] >= 5]
+data_dep = data.copy()
+data_dep.drop(columns='date', inplace=True)
+
 
 
 def home(request):
