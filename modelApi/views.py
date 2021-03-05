@@ -136,7 +136,7 @@ def predict(request):
     if inp_wickets_last_5 > inp_wickets:
         return render(request,"wicketError.html")
     if inp_overs==20:
-    return render(request,"predict2.html",{'inp_runs':inp_runs,'inp_bat_team':inp_bat_team})
+        return render(request,"predict2.html",{'inp_runs':inp_runs,'inp_bat_team':inp_bat_team})
 
     # Calling the funtion to get firstInn Prediction status
     prediction_from_api = FirstInnPrediction(
